@@ -2,8 +2,8 @@
 <html lang="en" class="open-sans-italic">
 <head>
 	<meta charset="UTF-8">
-	<title>Villa</title>
-	<script src="js/villa.js"></script>
+	<title>Mowe</title>
+	<script src="dist/js/villa.js"></script>
 	<link rel="stylesheet" href="dist/css/villa.min.css"/>
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
@@ -13,7 +13,273 @@
 	<script src="dist/js/classList.min.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body class="grey-50 font-grey-900 flex flex-row flex-wrap child-grow-1">
+
+	<style scoped="scoped">
+
+		.child-width-100 > * {
+			width: 100%;
+		}
+
+		.child-grow-1 > * {
+			-webkit-flex-grow: 1;
+			flex-grow: 1;
+		}
+
+		.block {
+			padding: 1.5em 0;
+		}
+
+		.block .container {
+			max-width: 36em;
+		}
+
+		h1 {
+			font-size: 2.25em;
+			font-weight: 300;
+			padding: .5em 0 .5em;
+			text-align: center;
+		}
+
+		h2 {
+			border-bottom: solid 1px #9e9e9e;
+			font-size: 1.5em;
+			font-weight: 600;
+			margin-bottom: .5em;
+			padding: .75em 0 .375em;
+			width: 100%;
+		}
+
+		table {
+			border-spacing: 0;
+			width: 100%;
+			margin-bottom: 2em;
+		}
+
+		table tbody tr:last-child td,
+		table tbody tr:last-child th {
+			border: none;
+		}
+
+		table td,
+		table th {
+			text-align: left;
+			border-bottom: solid #bdbdbd;
+			padding: 8px;
+		}
+
+		table thead th {
+			text-align: left;
+			border-width: 2px;
+		}
+
+		table tbody td,
+		table tbody th {
+			border-width: 1px;
+		}
+
+		table .contents {
+			width: 14em;
+			color: #616161;
+			font-size: .875em;
+		}
+
+		table .contents li:before {
+			content: '-';
+		}
+
+		table .price {
+			width: 6em;
+		}
+
+		table .price:before {
+			content: 'R$';
+		}
+
+		table .price.dolar:before {
+			content: 'US$';
+		}
+
+	</style>
+
+	<div id="plans" class="block grey-200">
+
+		<div class="container">
+
+			<h1>Planos</h1>
+
+			<table>
+
+				<thead>
+
+				<tr>
+					<th>Item</th>
+					<th>Caracteristicas</th>
+					<th>Preço</th>
+				</tr>
+
+				</thead>
+
+				<tbody>
+
+				<tr>
+					<th>Cartão de visitas</th>
+					<td class="contents">
+						<ul>
+							<li>Site (Cartão de visitas)</li>
+							<li>Hospedagem + E-mail</li>
+							<li>Hero (splash)</li>
+							<li>Mapa no site</li>
+						</ul>
+					</td>
+					<td class="price">228,00</td>
+				</tr>
+
+				<tr>
+					<th>Empresa</th>
+					<td class="contents">
+						<ul>
+							<li>Site (Unidimensional)</li>
+							<li>Hospedagem + E-mail</li>
+							<li>Hero (splash)</li>
+							<li>Album de fotos no Hero</li>
+							<li>Album de fotos</li>
+							<li>Mapa no site</li>
+						</ul>
+					</td>
+					<td class="price">780,00</td>
+				</tr>
+
+				</tbody>
+
+			</table>
+
+		</div>
+
+	</div>
+
+	<div id="prices" class="block grey-50">
+
+		<div class="container">
+
+			<h1>Detalhamento</h1>
+
+			<h2>Serviço básico</h2>
+
+			<table>
+
+				<thead>
+
+					<tr>
+						<th>Item</th>
+						<th>Preço</th>
+					</tr>
+
+				</thead>
+
+				<tbody>
+
+					<tr>
+						<td>Site - Unidimensional</td>
+						<td class="price">320,00</td>
+					</tr>
+
+					<tr>
+						<td>Site - Cartão de Visitas</td>
+						<td class="price">48,00</td>
+					</tr>
+
+				</tbody>
+
+			</table>
+
+			<h2>Serviço de hospedagem</h2>
+
+			<table>
+
+				<thead>
+
+					<tr>
+						<th>Item</th>
+						<th>Preço</th>
+					</tr>
+
+				</thead>
+
+				<tbody>
+
+					<tr>
+						<td>Hospedagem</td>
+						<td class="price">48,00</td>
+					</tr>
+
+					<tr>
+						<td>E-mail único</td>
+						<td class="price">48,00</td>
+					</tr>
+
+					<tr>
+						<td>E-mail basico</td>
+						<td class="price">72,00</td>
+					</tr>
+
+					<tr>
+						<td>Hospedagem + E-mail único (promocional)</td>
+						<td class="price">72,00</td>
+					</tr>
+
+					<tr>
+						<td>Hospedagem + E-mail básico (promocional)</td>
+						<td class="price">96,00</td>
+					</tr>
+
+				</tbody>
+
+			</table>
+
+			<h2>Módulos de site</h2>
+
+			<table>
+
+				<thead>
+
+					<tr>
+						<th>Item</th>
+						<th>Preço</th>
+					</tr>
+
+				</thead>
+
+				<tbody>
+
+					<tr>
+						<td>Hero (splash)</td>
+						<td class="price">36,00</td>
+					</tr>
+
+					<tr>
+						<td>Album de fotos no Hero (até 4 fotos)</td>
+						<td class="price">96,00</td>
+					</tr>
+
+					<tr>
+						<td>Album de fotos (até 10 fotos)</td>
+						<td class="price">160,00</td>
+					</tr>
+
+					<tr>
+						<td>Mapa no site (Google Maps)</td>
+						<td class="price">72,00</td>
+					</tr>
+
+				</tbody>
+
+			</table>
+
+		</div>
+
+	</div>
+
 
 </body>
 </html>
