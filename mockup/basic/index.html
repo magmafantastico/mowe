@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="open-sans-italic">
+<head>
+	<meta charset="UTF-8">
+	<title>Mowe - Cartão de visitas</title>
+	<script src="../../dist/js/villa.js"></script>
+	<link rel="stylesheet" href="../../dist/css/villa.min.css"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="../../dist/css/material-colors.css"/>
+	<link rel="stylesheet" type="text/css" href="../../dist/css/cross.css"/>
+	<script src="../../dist/js/html5shiv.js"></script>
+	<script src="../../dist/js/html5shiv-printshiv.js"></script>
+	<script src="../../dist/js/classList.min.js"></script>
+	<![endif]-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIg3AXXg9IggWXA0iPh6Ii-Jb_XokH0ug"></script>
+	<script type="text/javascript">
+		function initialize() {
+			var mapOptions = {
+				center: { lat: -22.784463, lng: -50.220890},
+				zoom: 18,
+				scrollwheel: false
+			};
+			var map = new google.maps.Map(document.getElementById('map-canvas'),
+					mapOptions);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+</head>
+<body class="grey-50 font-grey-900">
+
+<style scoped="scoped">
+
+	.navbar,
+	.navbar * {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+
+	.navbar {
+		height: 3em;
+	}
+
+	.navbar .logotype {
+		font-weight: 700;
+	}
+
+	.navbar a {
+		-webkit-align-items: center;
+		align-items: center;
+		padding: 0 1em;
+	}
+
+	.navbar a:hover {
+		background-color: #616161;
+	}
+
+	h1 {
+		font-weight: 300;
+	}
+
+	.maps iframe,
+	.maps .map {
+		width: 100%;
+		height: 24em;
+	}
+
+	body > footer {
+		padding: 1em 0;
+	}
+
+</style>
+
+<div class="navbar grey-900 font-grey-400 align-stretch">
+
+	<nav class="container flex-row justify-between align-stretch">
+
+		<header class="align-stretch">
+			<ul class="flex-row align-stretch">
+				<li><a href="#"><span class="logotype">Sua Marca</span></a></li>
+			</ul>
+		</header>
+
+		<footer class="align-stretch">
+			<ul class="flex-row align-stretch">
+				<li><a href="#">Contato</a></li>
+			</ul>
+		</footer>
+
+	</nav>
+
+</div>
+
+<div class="hero height-window grey-600 font-white flex align-center justify-center">
+	<h1>Capa (hero)</h1>
+</div>
+
+<div class="block maps">
+	<div id="map-canvas" class="map"></div>
+</div>
+
+<footer class="grey-900 font-white flex justify-center align-center">
+	<h1>Rodapé</h1>
+</footer>
+
+</body>
+</html>
