@@ -2,6 +2,8 @@
 <html lang="en" class="open-sans-italic">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 	<title>Mowe</title>
 	<script src="../dist/js/villa.js"></script>
 	<link rel="stylesheet" href="../dist/css/villa.min.css"/>
@@ -16,6 +18,19 @@
 <body class="grey-50 font-grey-900 flex flex-row flex-wrap child-grow-1">
 
 	<style scoped="scoped">
+
+		* {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		*:before,
+		*:after {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
 
 		.child-width-100 > * {
 			width: 100%;
@@ -32,6 +47,19 @@
 
 		.block .container {
 			max-width: 36em;
+		}
+
+		@media (max-width: 60em) {
+
+			body {
+				/*margin: 0 1em;*/
+			}
+
+			.block .container {
+				max-width: 100%;
+				padding: 0 1em;
+			}
+
 		}
 
 		h1 {
@@ -69,8 +97,12 @@
 		}
 
 		table thead th {
-			text-align: left;
 			border-width: 2px;
+			-webkit-hyphens: auto;
+			-moz-hyphens: auto;
+			-ms-hyphens: auto;
+			hyphens: auto;
+			text-align: left;
 		}
 
 		table tbody td,
@@ -101,13 +133,25 @@
 			content: 'US$';
 		}
 
+		.beta,
+		.promo {
+			font-size: .875em;
+		}
+
 		.beta {
 			color: #d50000;
-			font-size: .875em;
 		}
 
 		.beta:before {
 			content: 'beta';
+		}
+
+		.promo {
+			color: #0d47a1;
+		}
+
+		.promo:before {
+			content: 'promocional';
 		}
 
 	</style>
@@ -142,7 +186,7 @@
 							<li>Mapa no site</li>
 						</ul>
 					</td>
-					<td class="price">228,00</td>
+					<td class="price">210,00</td>
 				</tr>
 
 				<tr>
@@ -152,11 +196,12 @@
 							<li>Site (Unidimensional)</li>
 							<li>Hospedagem + E-mail Básico</li>
 							<li>Hero (splash)</li>
+							<li>Galeria de serviços</li>
 							<li>Album de fotos</li>
 							<li>Mapa no site</li>
 						</ul>
 					</td>
-					<td class="price">684,00</td>
+					<td class="price">690,00</td>
 				</tr>
 
 				<tr>
@@ -168,7 +213,7 @@
 							<li>Album de fotos no Hero</li>
 						</ul>
 					</td>
-					<td class="price">844,00</td>
+					<td class="price">900,00</td>
 				</tr>
 
 				<tr>
@@ -179,7 +224,7 @@
 							<li>Localização</li>
 						</ul>
 					</td>
-					<td class="price">1020,00</td>
+					<td class="price">1060,00</td>
 				</tr>
 
 				<tr>
@@ -190,7 +235,7 @@
 							<li>Blog</li>
 						</ul>
 					</td>
-					<td class="price">1500,00</td>
+					<td class="price">1480,00</td>
 				</tr>
 
 				</tbody>
@@ -215,6 +260,7 @@
 
 					<tr>
 						<th>Item</th>
+						<th>Caracteristicas</th>
 						<th>Preço</th>
 					</tr>
 
@@ -224,17 +270,35 @@
 
 					<tr>
 						<td>Site - Cartão de Visitas</td>
+						<td class="contents">
+							<li>Design Vertical</li>
+							<li>Rodapé</li>
+						</td>
 						<td class="price">48,00</td>
 					</tr>
 
 					<tr>
 						<td>Site - Unidimensional</td>
-						<td class="price">320,00</td>
+						<td class="contents">
+							<li>Design Vertical</li>
+							<li>Barra de navegação</li>
+							<li>API de contato</li>
+							<li>Scroll automatico</li>
+							<li>Rodapé</li>
+						</td>
+						<td class="price">360,00</td>
 					</tr>
 
 					<tr>
 						<td>Site - Bidimensional <span class="beta"></span></td>
-						<td class="price">480,00</td>
+						<td class="contents">
+							<li>Design Hibrido</li>
+							<li>Barra de navegação</li>
+							<li>API de contato</li>
+							<li>Scroll automatico</li>
+							<li>Rodapé</li>
+						</td>
+						<td class="price">600,00</td>
 					</tr>
 
 				</tbody>
@@ -267,17 +331,17 @@
 					</tr>
 
 					<tr>
-						<td>E-mail único + Google (promocional)</td>
+						<td>E-mail único + Google <span class="promo"></span> <span class="beta"></span></td>
 						<td class="price">64,00</td>
 					</tr>
 
 					<tr>
-						<td>Hospedagem + E-mail único (promocional)</td>
+						<td>Hospedagem + E-mail único <span class="promo"></span></td>
 						<td class="price">72,00</td>
 					</tr>
 
 					<tr>
-						<td>Hospedagem + E-mail único + Google (promocional)</td>
+						<td>Hospedagem + E-mail único + Google <span class="promo"></span> <span class="beta"></span></td>
 						<td class="price">96,00</td>
 					</tr>
 
@@ -287,7 +351,7 @@
 					</tr>
 
 					<tr>
-						<td>Hospedagem + E-mail básico (promocional)</td>
+						<td>Hospedagem + E-mail básico <span class="promo"></span></td>
 						<td class="price">96,00</td>
 					</tr>
 
@@ -297,7 +361,7 @@
 					</tr>
 
 					<tr>
-						<td>Hospedagem + E-mail empresa (promocional)</td>
+						<td>Hospedagem + E-mail empresa <span class="promo"></span></td>
 						<td class="price">160,00</td>
 					</tr>
 
@@ -326,6 +390,11 @@
 					</tr>
 
 					<tr>
+						<td>Galeria de serviços (splash)</td>
+						<td class="price">48,00</td>
+					</tr>
+
+					<tr>
 						<td>Album de fotos no Hero (até 4 fotos)</td>
 						<td class="price">96,00</td>
 					</tr>
@@ -333,6 +402,11 @@
 					<tr>
 						<td>Album de fotos (até 10 fotos)</td>
 						<td class="price">160,00</td>
+					</tr>
+
+					<tr>
+						<td>Formulário de contato <span class="beta"></span></td>
+						<td class="price">48,00</td>
 					</tr>
 
 					<tr>
@@ -349,7 +423,6 @@
 						<td>Blog <span class="beta"></span></td>
 						<td class="price">480,00</td>
 					</tr>
-
 
 				</tbody>
 

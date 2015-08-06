@@ -2,8 +2,8 @@
 <html lang="en" class="open-sans-italic">
 <head>
 	<meta charset="UTF-8">
-	<title>Mowe - Básico</title>
-	<script src="../../dist/js/villa.min.js"></script>
+	<title>Mowe - Empresa</title>
+	<script src="../../dist/js/villa.js"></script>
 	<link rel="stylesheet" href="../../dist/css/villa.min.css"/>
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" type="text/css" href="../../dist/css/material-colors.css"/>
@@ -128,13 +128,26 @@
 
 </div>
 
-<div class="hero block height-window grey-600 font-white flex align-center justify-center">
+<div class="hero block height-window grey-600 font-white flex align-center justify-center bg-cover">
+	<style scoped="scoped">
+		.hero {
+			background-image: url("../../img/urban02.jpeg");
+			background-position: bottom;
+		}
+
+		.hero h1 {
+			text-shadow: 1px 1px 2px #000;
+		}
+	</style>
 	<h1>Capa (hero)</h1>
 </div>
 
 <div class="wwd block grey-300">
+
 	<div class="container flex flex-column align-center">
+
 		<h1>Galeria de serviços</h1>
+
 		<ul class="services">
 			<li>
 				<header class="grey"></header>
@@ -161,7 +174,9 @@
 				<span>Serviço F</span>
 			</li>
 		</ul>
+
 	</div>
+
 </div>
 
 <div class="maps block">
