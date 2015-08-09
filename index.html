@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="open-sans">
+<html lang="en" class="fira-sans">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
@@ -57,13 +57,43 @@
 	}
 
 	.plans .plan {
-		max-width: 14em;
-		margin: .5em;
+		max-width: 50%;
 	}
 
-	.plans .plan > * {
-		width: 100%;
-		margin: 0 2em;
+	@media (min-width: 48em) {
+
+		.plans .plan {
+			max-width: 50%;
+		}
+
+	}
+
+	@media (min-width: 60em) {
+
+		.plans .plan {
+			max-width: 33.333333333%;
+		}
+
+	}
+
+	.plans .plan .select-area {
+		background-color: #eeeeee;
+		border: solid 1px #eeeeee;
+		border-radius: 10px;
+		height: 100%;
+		margin: .5em;
+		padding: 1em 0 2.25em;
+		cursor: pointer;
+	}
+
+	.plans .plan .select-area:hover {
+		border: solid 1px #bdbdbd;
+		/*background-color: #e0e0e0;*/
+	}
+
+	.plans .plan .select-area:active,
+	.plans .plan .select-area:focus {
+		background-color: #bdbdbd;
 	}
 
 	.plans .plan header {
@@ -75,80 +105,107 @@
 		-ms-flex-direction: column;
 		-webkit-flex-direction: column;
 		flex-direction: column;
+		height: 4.5em;
 		text-align: center;
+		line-height: 1.4;
+	}
+
+	.plans .plan header .price,
+	.plans .plan header .title {
+		font-size: 1.3125em;
 	}
 
 	.plans .plan header .price {
-		font-size: 1.125em;
-		font-weight: 300;
+		color: #757575;
+		font-size: 1em;
 	}
 
 	.plans .plan header .price:before {
 		content: 'R$';
 	}
 
-	.plans .plan header .title {
-		font-size: 1.5em;
-	}
-
 	.plans .plan .list {
 		list-style: outside none circle;
+		margin: 0 1em 0 3em;
 	}
 
 	.plans .plan .list li {
+		color: #616161;
 		display: list-item;
+		margin-bottom: .5em;
 	}
 
 </style>
 
-<div class="plans width-100 flex flex-wrap justify-center child-width-100 child-flex child-flex-column">
+<div class="plans width-100 flex flex-wrap child-width-100 child-flex child-flex-column">
 
 	<div class="plan grow-1">
-		<header>
-			<span class="title">Cartão de Visitas</span>
-			<span class="price">210,00</span>
-		</header>
-		<ul class="list">
-			<li>Hospedagem + E-mail</li>
-			<li>Mapa no site</li>
-		</ul>
+		<a class="select-area child-flex child-flex-column">
+			<header>
+				<span class="title">Cartão de Visitas</span>
+				<span class="price">210,00</span>
+			</header>
+			<ul class="list">
+				<li>Hospedagem + E-mail</li>
+				<li>Mapa no site</li>
+			</ul>
+		</a>
 	</div>
 
 	<div class="plan grow-1">
-		<header>
-			<span class="title">Site Básico</span>
-			<span class="price">690,00</span>
-		</header>
-		<ul class="list">
-			<li>Hospedagem + E-mail</li>
-			<li>Topo de site personalizado</li>
-			<li>Galeria de Serviços</li>
-			<li>Álbum de Fotos</li>
-			<li>Mapa no Site</li>
-		</ul>
+		<a class="select-area child-flex child-flex-column">
+			<header>
+				<span class="title">Site Básico</span>
+				<span class="price">690,00</span>
+			</header>
+			<ul class="list">
+				<li>Hospedagem + E-mail</li>
+				<li>Topo de site personalizado</li>
+				<li>Galeria de Serviços</li>
+				<li>Álbum de Fotos</li>
+				<li>Mapa no Site</li>
+			</ul>
+		</a>
 	</div>
 
 	<div class="plan grow-1">
-		<header>
-			<span class="title">Site Empresa</span>
-			<span class="price">900,00</span>
-		</header>
-		<ul class="list">
-			<li>Tudo do plano Básico</li>
-			<li>Hospedagem + E-mail Empresa</li>
-			<li>Álbum de fotos no topo do site</li>
-		</ul>
+		<a class="select-area child-flex child-flex-column">
+			<header>
+				<span class="title">Site Empresa</span>
+				<span class="price">900,00</span>
+			</header>
+			<ul class="list">
+				<li>Tudo do plano Básico</li>
+				<li>Hospedagem + E-mail Empresa</li>
+				<li>Álbum de fotos no topo do site</li>
+			</ul>
+		</a>
 	</div>
 
 	<div class="plan grow-1">
-		<header>
-			<span class="title">Site Summus</span>
-			<span class="price">1060,00</span>
-		</header>
-		<ul class="list">
-			<li>Tudo do plano Empresa</li>
-			<li>Suporte a Multi-idiomas</li>
-		</ul>
+		<a class="select-area child-flex child-flex-column">
+			<header>
+				<span class="title">Site Summus</span>
+				<span class="price">1060,00</span>
+			</header>
+			<ul class="list">
+				<li>Tudo do plano Empresa</li>
+				<li>Suporte a Multi-idiomas</li>
+			</ul>
+		</a>
+	</div>
+
+	<div class="plan grow-1">
+		<a class="select-area child-flex child-flex-column">
+			<header>
+				<span class="title">Site Electus</span>
+				<span class="price">1480,00</span>
+			</header>
+			<ul class="list">
+				<li>Tudo do plano Summus</li>
+				<li>Blog</li>
+			</ul>
+		</a>
 	</div>
 
 </div>
