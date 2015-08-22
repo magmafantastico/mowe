@@ -1,0 +1,93 @@
+/*!
+ * Villa Mowe Plans v1.0.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+ */
+
+/*
+		Plans Styles
+	*/
+
+.products {
+	max-width: 60em;
+	margin: 0 auto;
+}
+
+.products .product {
+	max-width: 50%;
+}
+
+@media (min-width: 48em) {
+
+	.products .product {
+		max-width: 50%;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	.products .product {
+		max-width: 33.333333333%;
+	}
+
+}
+
+.products .product .select-area {
+	background-color: #eeeeee;
+	border: solid 1px #eeeeee;
+	border-radius: 10px;
+	height: 100%;
+	margin: .5em;
+	padding: 1em 0 2.25em;
+	cursor: pointer;
+}
+
+.products .product .select-area:hover {
+	border: solid 1px #bdbdbd;
+	/*background-color: #e0e0e0;*/
+}
+
+.products .product .select-area:active,
+.products .product .select-area:focus {
+	background-color: #bdbdbd;
+}
+
+.products .product header {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	height: 4.5em;
+	text-align: center;
+	line-height: 1.4;
+}
+
+.products .product header .price,
+.products .product header .title {
+	font-size: 1.3125em;
+}
+
+.products .product header .price {
+	color: #757575;
+	font-size: 1em;
+}
+
+.products .product header .price:before {
+	content: 'R$';
+}
+
+.products .product .list {
+	list-style: outside none circle;
+	margin: 0 1em 0 3em;
+}
+
+.products .product .list li {
+	color: #616161;
+	display: list-item;
+	margin-bottom: .5em;
+}

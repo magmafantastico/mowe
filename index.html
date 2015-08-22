@@ -7,6 +7,7 @@
 	<title>Mowe</title>
 	<script src="dist/js/villa.min.js"></script>
 	<link rel="stylesheet" href="dist/css/villa.min.css"/>
+	<link rel="stylesheet" href="css/product.css"/>
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
 	<link rel="stylesheet" type="text/css" href="dist/css/cross.css"/>
@@ -47,99 +48,11 @@
 		flex-direction: row;
 	}
 
-	/*
-		Plans Styles
-	*/
-
-	.plans {
-		max-width: 60em;
-		margin: 0 auto;
-	}
-
-	.plans .plan {
-		max-width: 50%;
-	}
-
-	@media (min-width: 48em) {
-
-		.plans .plan {
-			max-width: 50%;
-		}
-
-	}
-
-	@media (min-width: 60em) {
-
-		.plans .plan {
-			max-width: 33.333333333%;
-		}
-
-	}
-
-	.plans .plan .select-area {
-		background-color: #eeeeee;
-		border: solid 1px #eeeeee;
-		border-radius: 10px;
-		height: 100%;
-		margin: .5em;
-		padding: 1em 0 2.25em;
-		cursor: pointer;
-	}
-
-	.plans .plan .select-area:hover {
-		border: solid 1px #bdbdbd;
-		/*background-color: #e0e0e0;*/
-	}
-
-	.plans .plan .select-area:active,
-	.plans .plan .select-area:focus {
-		background-color: #bdbdbd;
-	}
-
-	.plans .plan header {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-ms-flex-direction: column;
-		-webkit-flex-direction: column;
-		flex-direction: column;
-		height: 4.5em;
-		text-align: center;
-		line-height: 1.4;
-	}
-
-	.plans .plan header .price,
-	.plans .plan header .title {
-		font-size: 1.3125em;
-	}
-
-	.plans .plan header .price {
-		color: #757575;
-		font-size: 1em;
-	}
-
-	.plans .plan header .price:before {
-		content: 'R$';
-	}
-
-	.plans .plan .list {
-		list-style: outside none circle;
-		margin: 0 1em 0 3em;
-	}
-
-	.plans .plan .list li {
-		color: #616161;
-		display: list-item;
-		margin-bottom: .5em;
-	}
-
 </style>
 
-<div class="plans width-100 flex flex-wrap child-width-100 child-flex child-flex-column">
+<div class="products width-100 flex flex-wrap child-width-100 child-flex child-flex-column">
 
-	<div class="plan grow-1">
+	<div class="product grow-1">
 		<a class="select-area child-flex child-flex-column">
 			<header>
 				<span class="title">Cartão de Visitas</span>
@@ -152,7 +65,29 @@
 		</a>
 	</div>
 
-	<div class="plan grow-1">
+	<div class="product grow-1">
+		<a class="select-area child-flex child-flex-column">
+			<header>
+				<span class="title">Site</span>
+				<span class="price">690,00</span>
+			</header>
+			<ul class="list">
+				<li>Hospedagem + E-mail</li>
+				<li>Topo de site personalizado</li>
+				<li>Galeria de Serviços</li>
+				<li>Álbum de Fotos</li>
+				<li>Mapa no Site</li>
+			</ul>
+		</a>
+	</div>
+
+</div>
+
+<style></style>
+
+<div class="products  width-100 flex flex-wrap child-width-100 child-flex child-flex-column">
+
+	<div class="product grow-1">
 		<a class="select-area child-flex child-flex-column">
 			<header>
 				<span class="title">Site Básico</span>
@@ -168,7 +103,7 @@
 		</a>
 	</div>
 
-	<div class="plan grow-1">
+	<div class="product grow-1">
 		<a class="select-area child-flex child-flex-column">
 			<header>
 				<span class="title">Site Empresa</span>
@@ -182,7 +117,7 @@
 		</a>
 	</div>
 
-	<div class="plan grow-1">
+	<div class="product grow-1">
 		<a class="select-area child-flex child-flex-column">
 			<header>
 				<span class="title">Site Summus</span>
@@ -195,7 +130,7 @@
 		</a>
 	</div>
 
-	<div class="plan grow-1">
+	<div class="product grow-1">
 		<a class="select-area child-flex child-flex-column">
 			<header>
 				<span class="title">Site Electus</span>
